@@ -1,5 +1,4 @@
-# 🔧 Optimizing Iron Concentrate Yield with Machine Learning  
-# 🔧 Optimización del Porcentaje de Hierro en el Concentrado mediante Machine Learning  
+# 🔧 Optimizing Iron Concentrate Yield with Machine Learning / Optimización del Porcentaje de Hierro en el Concentrado mediante Machine Learning  
 
 ---
 
