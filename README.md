@@ -1,88 +1,102 @@
-# Optimizing Iron Concentrate Yield with Machine Learning
-
-# 🔧 Optimization of Iron Concentrate Percentage using Machine Learning
-
-## 📌 Project Description
-
-This project applies advanced data analysis and machine learning techniques to optimize the **% Iron Concentrate** in a mineral flotation process. By analyzing operational variables such as pH, reagent flow rates, and feed composition, the goal is to improve decision-making in process control and maximize the quality of the concentrate.
-
-Este proyecto aplica técnicas avanzadas de análisis de datos y aprendizaje automático para optimizar el **% de Hierro en el Concentrado** en un proceso de flotación minera. A través del análisis de variables operativas como el pH, el flujo de reactivos y la composición de alimentación, se busca mejorar la toma de decisiones en el control del proceso y maximizar la calidad del concentrado.
+# 🔧 Optimizing Iron Concentrate Yield with Machine Learning  
+# 🔧 Optimización del Porcentaje de Hierro en el Concentrado mediante Machine Learning  
 
 ---
 
-## 🎯 Objectives / Objetivos
+## 📌 Overview / Resumen
 
-- Predict and optimize the % Iron Concentrate based on process variables.  
-- Detect anomalies that may indicate operational inefficiencies or faults.  
-- Identify key variables influencing the quality of the concentrate.  
-- Build a machine learning model to simulate and optimize process conditions.
+This project presents a complete Machine Learning workflow aimed at optimizing the **% Iron Concentrate** produced in a mineral flotation process. The analysis incorporates operational variables such as pH, reagent dosage, feed composition, and pulp density to improve decision-making, maximize recovery, and reduce inefficiencies in mineral processing plants.
 
-- Predecir y optimizar el % de hierro en el concentrado según variables del proceso.  
-- Detectar anomalías que puedan indicar ineficiencias o fallos operativos.  
-- Identificar las variables clave que influyen en la calidad del concentrado.  
-- Construir un modelo de aprendizaje automático para simular y optimizar condiciones del proceso.
+Este proyecto desarrolla un flujo completo de Machine Learning orientado a optimizar el **% de Hierro en el Concentrado** en un proceso de flotación minera. El análisis integra variables operativas como pH, dosificación de reactivos, composición de alimentación y densidad de pulpa para mejorar la toma de decisiones, maximizar la recuperación y reducir ineficiencias en plantas de procesamiento mineral.
 
 ---
 
-## 🧰 Technologies & Tools Used / Tecnologías y Herramientas
+## 🔄 Workflow Funnel / Embudo de Trabajo
 
-- Python: `Pandas`, `NumPy`, `Scikit-learn`, `Matplotlib`, `Seaborn`, `XGBoost`, `Scipy`
-- Jupyter Notebook
-- Exploratory Data Analysis (EDA)
-- Machine Learning Models: Random Forest, Gradient Boosting
-- Bayesian Optimization (for hyperparameter tuning)
-
----
-
-## 📊 Dataset
-
-- Real-world operational data from a mineral flotation process.  
-- Data includes variables such as:
-  - % Iron Feed
-  - % Silica Feed
-  - pH, Reagent Flows (Starch, Amina)
-  - Ore Pulp Density
-  - Flotation Column Air Flow
-  - Output: % Iron Concentrate & % Silica Concentrate
+| Step / Paso | Description (EN) / Descripción (ES) | Contribution / Contribución |
+|--------------|-------------------------------------|------------------------------|
+| **1. Data Import** | Load raw operational dataset and validate sensor integrity. <br> Carga del dataset operativo y validación de lecturas de sensores. | **10%** |
+| **2. Data Cleaning & Preprocessing** | Handle missing values, convert numeric strings, detect anomalies. <br> Manejo de nulos, conversión de datos numéricos, detección de anomalías. | **25%** |
+| **3. Feature Engineering** | Create derived variables and normalization pipelines. <br> Creación de variables derivadas y normalización. | **15%** |
+| **4. Exploratory Data Analysis (EDA)** | Understand correlations, process trends, and variable dependencies. <br> Análisis de correlación, tendencias y dependencias entre variables. | **20%** |
+| **5. Predictive Modeling** | Train ML models (RF, XGBoost) and evaluate performance. <br> Entrenamiento y evaluación de modelos ML (RF, XGBoost). | **20%** |
+| **6. Optimization & Reporting** | Apply Bayesian Optimization and summarize operational insights. <br> Optimización bayesiana y reporte de hallazgos operativos. | **10%** |
 
 ---
 
-## 🔍 Methodology / Metodología
+## 📊 Key Insights / Principales Hallazgos
 
-1. **Data Cleaning & Preprocessing**  
-   - Conversion of numerical data from string to float (handling commas, missing values).
-   - Normalization and anomaly detection using Isolation Forest.
+- **High predictive accuracy** achieved by XGBoost (R² = 0.9574).  
+  **Alta precisión predictiva** obtenida con XGBoost (R² = 0.9574).
 
-2. **Exploratory Data Analysis**  
-   - Correlation analysis
-   - Feature importance evaluation
-   - Heatmaps and pairplots
+- **Most influential variables:**  
+  - % Silica Feed  
+  - % Iron Feed  
+  - Pulp pH  
+  - Amina Reagent Flow  
+  **Variables más influyentes:**  
+  - % Sílice en alimentación  
+  - % Hierro en alimentación  
+  - pH de pulpa  
+  - Flujo de reactivo Amina  
 
-3. **Predictive Modeling**  
-   - Training regression models (Random Forest, XGBoost).
-   - Evaluating using MSE and R² Score.
-   - Final model R²: **0.9574**
+- **Operational anomalies detected:** 7,264 irregular conditions across 736,282 records.  
+  **Anomalías detectadas:** 7,264 condiciones irregulares en 736,282 registros.
 
-4. **Optimization**  
-   - Bayesian optimization to find input conditions that maximize % Iron Concentrate.
-   - Best predicted output: **66.52% Iron Concentrate**
+- **Optimized output:**  
+  - Best predicted Iron Concentrate: **66.52%**  
+  **Resultado optimizado:**  
+  - Mejor valor predicho de Hierro en Concentrado: **66.52%**
+---
 
-5. **Anomaly Detection**  
-   - 7,264 anomalies detected out of 736,282 records.
-   - Useful for process diagnostics and preventive maintenance.
+## 🧰 Tech Stack / Herramientas
+
+`Python` · `Pandas` · `NumPy` · `Scikit-learn` · `XGBoost` · `Matplotlib` · `Seaborn` · `SciPy` · `Jupyter Notebook`
 
 ---
 
-## ✅ Results / Resultados
 
-- 📈 **Model Performance**  
-  - Mean Squared Error (MSE): `0.0532`  
-  - R² Score: `0.9574` — Excellent predictive performance.
+## 🚀 Next Steps / Próximos Pasos
 
-- 🔍 **Key Variables Influencing Output**  
-  - % Silica Feed, Ore Pulp pH, % Iron Feed, Amina Flow
+### 🔍 Technical Next Steps (EN)
+- Integrate real-time sensor data for predictive control.  
+- Develop a digital twin for the flotation circuit.  
+- Implement time-series forecasting to predict drift in pH, density, and reagent flow.  
+- Expand optimization to multi-objective goals (Iron ↑, Silica ↓, Reagent Cost ↓).
 
-- 🔧 **Optimized Conditions** (Bayesian Optimization)  
+### 🔧 Technical Next Steps (ES)
+- Integrar datos en tiempo real para control predictivo.  
+- Desarrollar un “digital twin” del circuito de flotación.  
+- Implementar modelos de series de tiempo para anticipar desvíos de pH y densidad.  
+- Expandir la optimización a objetivos múltiples (Hierro ↑, Sílice ↓, Costo de reactivos ↓).
+
+---
+
+### 🏭 Industry Recommendations (Mining Sector)
+
+**EN:**  
+- Deploy anomaly-based alarms to prevent quality deviations.  
+- Use ML-driven reagent dosing to improve recovery and reduce waste.  
+- Prioritize continuous pH monitoring, as small deviations significantly impact concentrate quality.  
+- Adopt hybrid control systems combining ML predictions with operator expertise.
+
+**ES:**  
+- Implementar alarmas basadas en anomalías para prevenir desviaciones de calidad.  
+- Usar dosificación de reactivos basada en ML para mejorar recuperación y reducir desperdicio.  
+- Priorizar monitoreo continuo de pH, ya que pequeñas variaciones afectan fuertemente la calidad del concentrado.  
+- Adoptar sistemas híbridos que combinen predicción ML y experiencia del operador.
 
 
 
+---
+
+## 👤 Author / Autor
+
+**Fabio López**  
+*Data Analyst | Machine Learning | Industrial Optimization | Python*  
+📧 fabio.lopez.analyst@gmail.com  
+🌐 https://www.linkedin.com/in/fabiolopezt/
+
+---
+
+> 💬 *"Data-driven optimization transforms industrial performance — La optimización basada en datos transforma el rendimiento industrial."*
