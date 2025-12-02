@@ -2,6 +2,10 @@
 
 ---
 
+![Project Cover](https://imgur.com/ytZ9LCf.png)
+
+---
+
 ## 📌 Overview / Resumen
 
 This project presents a complete Machine Learning workflow aimed at optimizing the **% Iron Concentrate** produced in a mineral flotation process. The analysis incorporates operational variables such as pH, reagent dosage, feed composition, and pulp density to improve decision-making, maximize recovery, and reduce inefficiencies in mineral processing plants.
